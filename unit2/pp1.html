@@ -1,0 +1,180 @@
+<!--
+    DOM - document object model
+
+    -The HTML DOM is a standard object model and programming interface for HTML.
+    it defines:
+    -HTML elements as objects
+    -The methods yo access the HTML Elments
+    -the events for all the HTML elements
+    the html DOM is constructed as a tree of objects
+
+    THE W3C document object model is a platform and language neutral interface
+    that allows programs and scropts to dynamically access and update the content,structure,and style of a document
+
+    Drawbacks of Document.write() - it just overwrites,appends or creates a new page
+
+    A DOM comprises of the following :
+    -properties - the characteristics of each object 
+    -methods - the functions that can be performed by that object
+    -event - methods corresponding to user actions
+
+    write("string"):
+    getElementsById():
+    getElementsByName():
+    getElementsByTagName():
+    Methods:
+    document.createElement() - creates a new element node using tag
+    document.createTextNode() - creates a new text node using tag
+    Property:
+    node.textContent or node.innerText - it is uded to set the text content of an element node without using html tags
+    node.innerHTML - it is used to set the content enclosed in the tag
+    node.appendChild() - add a node at the last child of a parent element 
+    node.insertBefore() - insert a node into the parent node before any sibling node 
+    node.removeChild() - replace an existing node with a new node
+    node.remove() - removes a node
+-->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MY first page</h1>
+    <p id = "demo">web</p>
+    <div class = "example">First div</div>
+    <div class = "example">Second div</div>
+    <button onclick = "myfunc()">TRY</button>
+    
+</body>
+<script>
+    document.getElementById("demo").innerHTML = "Hello world";
+    var x = document.getElementsByClassName("example");
+    function myfunc()
+    {
+        x[0].innerHTML = "Hey wassup";
+    }
+
+    
+</script>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <script>
+        function init()
+        {
+            p1 = document.querySelector("p");
+            p1.style.color = "blue";
+            list = document.querySelectorAll("li.g1");
+            //list = document.querySelectorAll("li");//if u wanted to append automata before data structures
+            for(i = 0;i < list.length;i++)
+            {
+                list[i].innerText = list[i].innerText.toUpperCase();
+            }
+            newele = document.createElement("li");
+            newele.innerText = "Automata";
+            p2 = document.querySelector("ul");
+            //p2.appendChild(newele);//cerates a new list node under the parent ul element\object
+            //p2.insertBefore(newele,list[0]);
+            p2.insertBefore(newele,p2.lastChild);
+            //p2.insertBefore(newele,p2.firstChild);
+            //list[0].remove();//removes web tech
+            //p2.removeChild(p2.children[0]);
+            //p2.removeChild(list[0]);//removes web tech
+            newele2 = document.createElement("li");
+            newele2.innerText = "DDCO";
+            //p2.replaceChild(newele2,p2.children[2]);
+            //p2.replaceChild(newele2,list[0]);
+            //list[0].parentNode.replaceChild(newele2,p2.children[3]);
+
+
+
+        }
+
+    </script>
+</head>
+<body onload = "init()">
+    <p>Subjects</p>
+    <ul>
+        <li>Data Structures</li>
+        <li class  = "g1">WEB Technologies</li>
+        <li class = "g1">Data Science</li>
+
+    </ul>
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    
+
+    <p class = 'g1'>I am amazing at web tech</p>
+    <ul>
+        <li>DDCO</li>
+        <li >AFLL</li>
+        <li >DSA</li>
+    </ul>
+    <button >Click here</button>
+
+
+    <script >
+        a = document.getElementsByClassName("g1");
+        a[0].style.color = "blue";
+        for(i = 0;i < a.length;i++)
+        {
+            a[i].innerHTML = a[i].innerHTML.toUpperCase();
+        }
+
+        list = document.querySelector("ul");
+        obj1 = document.createElement("li");
+        obj1.innerHTML = "LAMBDO";
+        obj2 = document.createElement("li");
+        obj2.innerHTML = "LAMb";
+        //list.appendChild(obj1);
+        
+        list.insertBefore(obj1,list.children[2]);
+        //list.removeChild(list.children[2]);
+        list.replaceChild(obj2,list.children[2]);
+        //obj2.remove();
+        //obj2.parentNode.remove(list.children[2]); removes the list
+        
+
+
+        
+    
+
+    
+
+
+       
+            
+            
+           
+        
+    </script>
+
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href="basic.css"/>
+    <script src = "jquery-3.6.0.js"></script>
+    <title>WEB</title>
+    <script>
+        $(document).ready(
+            function(){
+                $("#box1").css('color','white');
+                $("#box1").css('font-family','Arial');
+            }
+        )
+        $(document).ready(
+            function(){
+                $("button:first").click(function()
+                {
+                    $("ul").fadeToggle();
+                })
+            }
+        )
+    </script>
+</head>
+<body>
+    <div class = "container">
+        <div id = "box1" class = "box" style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 20px;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero aliquam numquam distinctio eaque! Voluptatum nihil maiores aperiam placeat, sed deserunt.</p>
+
+        </div>
+        <div class = "box">
+            <ul style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 20px;">
+                <li>MANGO</li>
+                <li>BANANA</li>
+                <li>KIWI</li>
+            </ul><br>
+            <button style="margin-top: 10px;background:black ;color:aliceblue">Click here</button>
+        </div>
+        <div class = "box">
+            <button style="margin-top: 10px;background:black ;color:aliceblue">View author names</button>
+
+
+        </div>
+    </div>
+    
+</body>
+</html>

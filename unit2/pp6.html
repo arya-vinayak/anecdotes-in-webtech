@@ -1,0 +1,70 @@
+
+<!-- mp3,Wav and ogg are the audio formats that are supported by html5
+Syntax:
+<audio controls = "c1">
+    <source src = "song.ogg" type = "audio/ogg"/>
+    <source src = "" type = "audio/mp3"/>
+    Your browser does not support the audio element
+</audio>
+autoplay will start playing as soon as its ready
+loop will play the audio again and again
+preload specifies that audio will be loaded at page load and ready to run,ignored if autoplay is present
+
+conrols attribute specidfies that te controls will be displayed such as the pause and play buttton
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDVID</title>
+    <script>
+        function init1()
+        {
+            v = document.querySelector("#v1");
+            v.play();
+            setInterval(fun,1000);
+
+        }
+        function fun()
+        {
+            tmp = Math.floor(Math.random()*(v.duration));
+            console.log(tmp);
+            v.currentTime = tmp;
+        }
+        function init()
+        {
+            p1 = document.querySelector("#p1");
+            p1.value += 5;
+            if(p1.value != 100)
+            {
+                setInterval(init,1000);
+            }
+        }
+    </script>
+</head>
+<body onload = "init1()">
+    <p>Audio and Video in html</p>
+    <audio controls autoplay muted name = "media">
+        <source src = "song.ogg" type = "audio/ogg"/>
+        <!-- <source src = "" type = "audio/mp3"/> -->
+         <!-- <source src = "" type = "audio/Wav"/> -->
+        Your browser does not support the audio element
+    </audio><br><br>
+    <video id = "v1"  controls = "c1"width = "320" height = "240" >
+        
+        <source autoplay src = "video.mp4" type = "video/mp4" poster = "arya.jpeg" autoplay>
+        <!-- <source src = "video.ogg" type = "video/ogg"> -->
+        <!-- <source src = "video.webm" type = "video/webm"> -->
+    </video><br><br>
+
+    <label for = "file">File Download</label>
+    <progress id = "p1" value = "0" max = "100"></progress>
+    
+</body>
+</html>

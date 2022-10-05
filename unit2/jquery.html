@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("h1").click(function(){
+                $(this).hide();
+            });
+        });
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("li:first").css("color","red");
+                $("h2").fadeOut();
+                $("h2").fadeIn();
+                $("body").fadeOut();
+                $("body").fadeIn();
+                $("ol li").fadeOut();
+                $("ol li").fadeToggle();//opposite of the current state
+            });
+        });
+
+        $(document).ready(function(){
+            $("h2").click(function(){
+                $(this).animate({
+                    left:"250px",
+                    height:"250px",
+                });
+                
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 >Heading 1</h1>
+    <h2>Heading 2</h2>
+    <ol>
+        <li>APPLE</li>
+        <li>Orange</li>
+        <li>kiwi</li>
+    
+    </ol>
+    <ul>
+        <li>cricket</li>
+        <li>soccer</li>
+        <li>badminton</li>
+    
+    </ul>
+    <p style = "position:relative;">Para1</p>
+    <p>Para2</p>
+    <p>Para3</p><br><br>
+    <button>click me</button>
+
+    
+    
+</body>
+</html>

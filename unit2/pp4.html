@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events2</title>
+</head>
+<body id = "bd1">
+    <button id = "bt1">Click here</button>
+    <p id = "demo"></p>
+    <p>Something appears here on a double click</p>
+    <p id = "demo1">Click me</p><br>
+    Field 1: <input type = "text" id = "f1" value = "Hello world!!"><br>
+    Field 2: <input type = "text" id = "f2"><br>
+
+    <button id = "bt2">Copy text</button><br><br>
+    <img id = "img1" width = "250px" src = "arya.jpeg"><br><br>
+
+    <form name = "general">
+        Keyboard: <input type = "text" id = "ky1"><br><br>
+        Enter Your Name : <input type = "text" id = "fname"><br><br>
+
+    </form>
+    <script type = "text/javascript">
+        var button = document.querySelector("#bt1");
+        button.addEventListener("dblclick",func1);
+        function func1()
+        {
+            document.getElementById("demo").innerHTML = "Double click event has been fired";
+
+        }
+        button = document.querySelector("#bt2");
+        button.addEventListener("click",myfunc);
+        function myfunc()
+        {
+            document.getElementById("f2").value = document.getElementById("f1").value;
+        }
+        button = document.querySelector("#img1");
+        button.addEventListener("mouseover",mOver);
+        button.addEventListener("mouseout",mOut);
+        //screen events
+        function mOver()
+        {
+            alert("Mousover event is being triggered");
+            document.getElementById("bd1").bgcolor = "red";
+
+            
+        }
+        function mOut()
+        {
+            alert("Mousout event is being triggered");
+
+        }
+        var p = document.querySelector("#demo1");
+        p.addEventListener("mousedown",mDown);
+        p.addEventListener("mouseup",mUp);
+        function mDown()
+        {
+            document.getElementById("demo1").innerHTML = "MOUSE is held";
+
+        }
+        function mUp()
+        {
+            document.getElementById("demo1").innerHTML = "MOUSE is released";
+
+        }
+
+        //topic - context menu
+        //document.addEventListener("contextmenu",hidemenu);
+        
+        function hidemenu(e)
+        {
+            e.preventDefault();//you can change the default behaviour of a document using this
+            //u cant  get right click options when this function is executed 
+        }
+
+        //document.addEventListener("mousemove",mMove);
+        function mMove(e)
+        {
+            console.log(e.screenX + " " + e.screenY);//displays the x and y coordinates of the cursor whenever it is being moved
+        }
+
+        //document.addEventListener("mouseover",MOver);
+        function MOver(e)
+        {
+            console.log(e.clientX + " " + e.clientY);
+        }
+
+        //key events - keydown,keyup,keypress
+
+        var kd = document.querySelector("#ky1");
+        kd.addEventListener("keydown",kDown);
+        function kDown()
+        {
+            alert("keydown has been triggered");
+
+        }
+        document.getElementById("fname").addEventListener("keyup",kUp);
+        function kUp()
+        {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+        window.addEventListener("keypress",Keypress);
+        function Keypress(e)
+        {
+            if(e.charCode === 97)
+            {
+                alert("Key A is pressed by the user");
+            }
+        }
+
+        
+        
+    
+
+        
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

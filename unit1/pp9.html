@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script type = "text/javascript">
+            //javascript objects
+            //method 1:object litrals
+            /*
+            let item = {name:"reebok",price:"rs 2000",av_qty:20};
+            document.write(item.name + " " +item.price + " " + item.av_qty );
+            
+            document.write("</br>");
+            item.show = function(){
+                document.write(this.name + " " +this.price + " " + this.av_qty );
+
+            }
+            item.show();
+            disadvantage is that we can create only a single object using this method
+            */
+           //Method 2  - Object constructors
+           function item(name,marks,no)
+           {
+                this.name = name;
+                this.marks = marks;
+                this.no = no;
+                /*
+                this.show = function(){
+                    document.write(this.name + " " + this.marks + "  " + this.no + "</br>");
+
+                }*/
+                //above show functions leads to multiple references
+        
+           }
+           let item1 = new item("arya",100,10);
+           let item2 = new item("ankush",100,9);
+           //so to create only a single reference to that function we do this
+           item.prototype.show = function(){
+                    document.write(this.name + " " + this.marks + "  " + this.no + "</br>");}
+           
+           item2.show();
+           
+
+            </script>
+            <body>
+            </body>
+    </html>

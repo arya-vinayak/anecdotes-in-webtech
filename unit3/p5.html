@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image</title>
+    <script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> 
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <p id = "id02"></p>
+    <script type = "text/babel">
+        class Image1 extends React.Component{
+            render()
+            {
+                return (
+                    <div>
+                       <img src = {this.props.imgname}></img>
+                        </div>
+                );
+            }
+        }
+        class Link1 extends React.Component{
+            render()
+            {
+                return (
+                    <div>
+                       <a href = {this.props.linkname}>{this.props.linkText}</a>
+                        </div>
+                );
+            }
+        }
+        class Combine extends React.Component{
+            render()
+            {
+                return (
+                    <div>
+                      <Image1 imgname = "tiger.jpeg"/>
+                      <Link1 linkname = "https://www.google.com/?client=safari&channel=iphone_bm" linkText ="Wanna go to google.com"/>
+                        </div>
+                )
+            }
+        }
+        ReactDOM.render(<Combine/>,document.getElementById("id02"));
+    </script>
+    
+</body>
+</html>

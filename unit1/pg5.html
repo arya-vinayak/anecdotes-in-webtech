@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>Flexible</title>
+        <style>
+          
+        
+        h1{
+            color: white;
+
+        }
+
+        div.one
+        {
+            background-color: white;
+        }
+        div.two
+        {
+            background-color: coral;
+        }
+        div.three
+        {
+            background-color: paleturquoise;
+        }
+        div.four
+        {
+            background-color: black;
+        }
+        div:nth-of-type(6)
+        {
+            background-color: bisque;
+        }
+        div:nth-of-type(7)
+        {
+            background-color: greenyellow;
+            flex-shrink: 1;
+        }
+        body
+        {
+            background-color: lightblue;
+        }
+
+        @media screen and (max-width: 700px)
+        {
+            body
+            {
+                background-image: url(avengers1.jpeg);
+
+            }
+        }
+        </style>
+    </head>
+    <link rel = "icon" href = "avengers.png"/>
+    <body>
+        <script type = "text/javascript">
+            document.write("hello world\n");
+            console.log("hello world")
+            var a = 69 //type: number
+            var b = 20 //type: number
+            var c; // undefined
+            var a1 = [1,2,3,4,5];
+            var a2 = ["a","r","y","a"];
+            if(a>b)
+            {
+                document.write("<br>" + a + "<br>");
+                console.log(typeof(a));//it tells us about the type of data
+                console.log(typeof(c));
+                console.log(a1);
+                console.log(typeof(a1))
+                console.log(typeof(a2))//
+                for(i = 0;a1[i];i++)
+                {
+                    document.write(a1[i] + "<br>");
+                    
+                }
+                
+                for(i = 0 ;i < 7;i++)
+                {
+                    document.write(a1[i] + "<br>");
+
+                }
+                function add(a,b)
+                {
+                    return a+b;
+                }
+                document.write(add(a,b) + "<br>");
+                console.log(add(a,b));
+                a1.push(21);
+                
+                
+                for(i = 0;a2[i];i++)
+                {
+                    document.write(a2[i] + "<br>");
+                    
+                }
+                for(i = 0;a1[i];i++)
+                {
+                    document.write(a1[i] + "<br>");
+                    
+                }
+                a1.pop();
+                for(i = 0;a1[i];i++)
+                {
+                    document.write(a1[i] + "<br>");
+                    
+                }
+                delete a1[2];
+                for(i = 0;a1[i];i++)
+                {
+                    document.write(a1[i] + "<br>");
+                    
+                }
+                for(i in a1)
+                {
+                    document.write(a1[i] + "<br>");
+
+                }
+                //shift
+                a1.shift();
+                //unshift
+                //a1.unshift();
+                for(i in a1)
+                {
+                    document.write(a1[i] + "<br>");
+
+                }
+                document.write("<br>"+a1);
+                
+                
+                
+                
+
+
+
+            }
+            
+            
+            
+        </script>
+        <p>Heading</p>
+        
+                  
+    </body>
+    
+
+
+
+</html>
+
+
+<!-- Embedded:
+<script type = "text/javascript">
+    ...
+</script>
+
+External:
+<script type:"text/javascript" src = "myscript.js"></script> -->

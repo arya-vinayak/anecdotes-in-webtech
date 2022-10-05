@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Introduction Class</title>
+
+          
+        
+       
+    </head>
+    
+    <body>
+        <script type = "text/javascript">
+        class test{
+            constructor(name,age)
+            {
+                this.uname = name;
+                this.uage = age;
+
+            }
+            show()
+            {
+                document.write(this.uname + " " + this.uage + "<br>");
+            }
+        }
+        var item1 = new test("PES",50);
+        item1.show();
+        //chnaging values of already declared objects
+        item1.uname = "PESU";
+        item1.uage = 69;
+        item1.show();
+        console.log(1==true);//true
+        console.log(1=="1");//true
+        console.log(3=="2");//false
+            
+        </script>
+        <p>Special character: &amp;,&lt;,&gt;,&quot;,&apos;,</p>
+
+        
+        
+                  
+    </body>

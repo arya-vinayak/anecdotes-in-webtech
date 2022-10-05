@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDVID</title>
+    <script type="text/javascript">
+        /*
+        navigator.geolocation - two primary functions
+        getCurrentPosition()
+        watchposition()
+
+
+        */
+        function func1()
+        {
+            //navigator.geolocation.getCurrentPosition(func1);
+            navigator.geolocation.watchPosition(func2);
+
+        }
+        function func2(position)
+        {
+            //navigator.geolocation.watchPosition(func)
+            alert("Current Position is " + position.coords.latitude + " " + position.coords.longitude);
+        }
+
+    </script>
+</head>
+<body>
+    <h1>AUDIO AND VIDEO</h1>
+    <audio>
+        <source src = "siren.mp3" type = "audio/mp3">
+    </audio>
+    <video width = "1000" height = "500"  controls ="control">
+        <source src="video.mp4" type = "video/mp4">
+    </video><br>
+</br>
+    <progress value = "50" max = "100">
+        <!--Autoplay without muted will not work without changing  settings-->
+    </progress><br>
+
+    <button onclick="func1()">Get current position</button>
+    <button onclick="func1()">SNAKE</button>
+
+    
+</body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Flexible</title>
+        <style>
+          
+        
+        h1{
+            color: white;
+
+        }
+
+        div.one
+        {
+            background-color: white;
+        }
+        div.two
+        {
+            background-color: coral;
+        }
+        div.three
+        {
+            background-color: paleturquoise;
+        }
+        div.four
+        {
+            background-color: black;
+        }
+        div:nth-of-type(6)
+        {
+            background-color: bisque;
+        }
+        div:nth-of-type(7)
+        {
+            background-color: greenyellow;
+            flex-shrink: 1;
+        }
+        body
+        {
+            background-color: lightblue;
+        }
+
+        @media screen and (max-width: 700px)
+        {
+            body
+            {
+                background-image: url(avengers1.jpeg);
+
+            }
+        }
+        </style>
+    </head>
+    <link rel = "icon" href = "avengers.png"/>
+    <body>
+        <script type = "text/javascript">
+            document.write("hello world\n");
+            console.log("hello world");
+            var arr = [1,11,22,2,23,5];
+            var arr1=["a","b","c","d"];
+            //splice
+            arr.splice(1,2,'e','f');//1,e,f,2,23,5
+            document.write("<br>",arr,"<br>");
+            console.log(arr.indexOf(23));//4
+            console.log(arr.slice(2,4));
+            document.write("<br>",arr,"<br>");
+            document.write(arr.slice(2,4));
+            var arr2 = [45,69,32,12,3,76];
+            
+            function sort1(a)
+            {
+                for(i in a)
+                {
+                    for(j in a)
+                    {
+                        if(a[j] < a[i])
+                        {
+                            b = a[j]
+                            a[j] = a[i]
+                            a[i] = b
+                        }
+                    }
+
+                }
+
+
+            }
+            sort1(arr2);
+            document.write("<br>"+arr2);
+        
+        </script>
+        <p>Heading</p>
+        
+                  
+    </body>
+    
+    
+

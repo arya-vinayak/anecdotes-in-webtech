@@ -1,0 +1,76 @@
+
+<!--
+    Propagation: it is the process of calling all the listeners for the given event type,attached to the nodes on the branch.
+    There are 3 phases in which an event can propagate to handlers defined in parent elements:
+    Capturing phase
+    Bubbling phase
+    Target phase
+
+    Syntax - elem.addEventListener("event",func_ref,flag);
+    flag = true -> handler registered for capturing phase
+    flag = false ->handler registerd for Bubbling phase(default)
+
+    the eventPhase event property returns a number that indicates which phase of the event is currently being evaluated
+    the number is represented by 4 constants:
+    0 - NONE
+    1 - CAPTURING_PHASE - the event flow is in the capturing phase
+    2 - AT_TARGET - the event flow is in the target phase
+    3 - BUBBLING_PHASE - the event flow is in the bubbling phase
+
+    an event object has properties and methods related to bubbling and capturing:
+
+    cancelBubble - a historical alias to StopPropagation(),Setting its value to true
+    eventPhase
+    cancelable
+    preventDefault() - prevents the default behaviour of an event 
+    stopPropagation() - stops further bubbling/captuting of the event
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propagtion</title>
+    <style>
+        div,ul,li{
+            border:5px solid black;
+            padding: 10px;
+            margin : 10px;
+        }
+    </style>
+    <script>
+        function init()
+        {
+            document.querySelector("#div").addEventListener("click",handler,true);
+            document.querySelector("#ul").addEventListener("click",handler,true);
+            document.querySelector("#li").addEventListener("click",handler,true);
+        }
+        function handler(event)
+        {
+            console.log(event.eventPhase+" "+event.target.id +" "+event.currentTarget.id);
+    
+        }
+    
+    
+    </script>
+</head>
+
+<body onload = "init()">
+    <div id = "div">
+        <p>Popular films </p>
+        <ul id = "ul">
+            <li>RRR</li>
+            <li>KGF-2</li>
+            <li id = "li">777 Charlie</li>
+        </ul>
+    </div>
+    
+</body>
+
+</html>

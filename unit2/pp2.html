@@ -1,0 +1,59 @@
+<!--
+    the process of connecting an event handler to an event is called as registration
+    there are two approaches to event handling 
+    - inline event handlers
+    - Event handler properties and event listeners
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <script type = "text/javascript">
+        function handle(event)
+        {
+            ev = event;
+            console.log(event.target.innerHTML);
+            event.target.style.color = "red";
+    
+        }
+        function init()
+        {
+            list = document.querySelectorAll("li");
+            for(let i in list)
+            {
+                list[i].onclick = handle;//property of an event method                
+                document.querySelector("p").addEventListener("click",function(event){
+                    event.target.innerHTML = "These were the super hit films of the year"
+                })
+            }
+        }
+    </script>
+</head>
+
+<!-- <body>
+    
+    <p onclick = "handle(event)">Popular films</p>
+    <ul>
+        <li>RRR</li>
+        <li>KGF-2</li>
+        <li>777 Charlie</li>
+    </ul>
+-->
+    
+    
+</body>
+</html> 
+<body onload = "init()">
+    <p >Popular films</p>
+    <ul>
+        <li>RRR</li>
+        <li>KGF-2</li>
+        <li>777 Charlie</li>
+    </ul>
+    
+</body>
+</html>

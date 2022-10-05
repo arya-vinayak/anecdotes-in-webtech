@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script type = "text/javascript">
+            
+
+           
+            function item(name,no)
+            {
+                this.name = name;
+                this.no = no;
+                
+            }
+            function gc(name,no,marks,state)
+            {
+                
+            }
+            item.prototype.show = function(){
+                    document.write(this.name + "  " + this.no + "</br>");
+                }
+
+            let item1 = new item("arya",10);
+            let item2 = new item("ankush",11);
+            item1.show();
+            item2.show();
+            
+            
+            </script>
+    </head>
+
+    </html>

@@ -1,0 +1,111 @@
+<!-- 
+    Embedded javascript code in a html file itself
+
+    it is done with the help of a script tag
+syntax: <script type = "text/javascript">....</script>
+
+external java script file can be link with the src attribute of the script tag
+syntax:<script type = "text/javascript" src = "myscript.js">
+-->
+
+
+
+<html>
+    <head>
+    <title>javascript</title>
+    </head>
+    <body>
+
+        <script type = "text/javascript">
+            let q = null;//object type
+            let y ;//undefined
+            let z = true;
+            let a= 10.22;
+            let b = "hii";
+            //let c = z.toString() -> "true"
+            let num = Number("10.22");//Number object constructor
+            console.log(num+ " " + typeof(num))
+            let num2 = parseInt("10.22")//parseFloat
+            console.log(a + z);
+            console.log(num2);
+            num3 = parseFloat(a);
+            console.log(num3);
+
+            //non primitive data types in js
+            var x= new Object()
+            x.name = "arya";
+            x.marks = 100;
+            var i;
+            for (i in x)
+            {
+                document.write(i + "=>" + x[i] + "</br>");
+            }
+
+    
+            var num4 = new Number("20");
+            var str = new String("hiii");
+            var dt = new Date(2003,5,6);
+            console.log(typeof(num4));
+            console.log(typeof(str));
+            console.log(typeof(dt));
+
+            var arr1 = new Array(10)
+            var arr2 = new Array(12,34,543)
+            for(i in arr2)
+            {
+                console.log(arr2[i] +" "+ typeof(arr2[i]) + " "+ typeof(i));//i is of string type
+
+            }
+            function add(a,b= 0)//provide default values otherwise will come undefined
+            {
+                return a+b;
+            }
+            var x = add(5,8);
+            console.log(x);
+            var j = add(5);
+            console.log(j);//Nan
+            var ref= function()
+            {
+                var s = 0;
+                for(i in arguments)
+                {
+                    s = s + arguments[i]//but these are ob jects and not actual arrays
+
+                }
+                return s;
+                
+
+            }
+            console.log(ref(10,20,30,50))
+
+            var obj = new Object();
+            obj.name = "ari";
+            obj.no = "56";
+            for(i in obj)
+            {
+                console.log(i  + " " + obj[i])
+            }
+            var aro = function(...args){
+                var s = 0;
+                console.log(args)
+                for(i in args)
+                {
+                    s = s + args[i];
+                }
+                console.log("sum is " + s);
+            }
+            aro(1,2,3,4,5);
+            //hoisting 
+            //var declarations will automatically go to the top of the scope na dnot their initialisations 
+            //for const and let , hoisting does not take place
+
+
+
+           
+            
+
+        </script>
+    </body>
+
+
+    </html>

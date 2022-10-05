@@ -1,0 +1,169 @@
+<!--
+
+3 ways of including css intoour html file
+inline stype sheet - along with the tags using the style attribute
+syntax - style = "color:red;font-family:bold;"
+internal style sheet - with the help of the style tag in the head part of the html code
+external style sheet - a separate css file is connected to the html document 
+
+-->
+<html>
+
+<head>
+
+    <title>Wikipedia</title>
+    <style>
+
+        ol>li{
+            color:blue;
+            
+        }
+        h1,h2,h3
+        {
+            color:red;
+            font-family:arial;
+            font-weight:bold;
+        }
+        li:hover
+       {
+        color:green;
+       }
+       ul>li.hi
+       {
+        color:blueviolet;
+       }
+       dl>dd#l1
+       {
+        color:red;
+       }
+       a
+       {
+        color:blue;
+       }
+
+       a:visited
+       {
+        color:pink;
+       }
+       a.active
+       {
+        color:blue;
+       }
+
+
+
+
+
+        </style>
+
+
+</head>
+
+<body>
+
+    <h1>Ordered list</h1>
+    <ol>
+        <li style = "color:pink;font-weight:bold">arya</li>
+        <li>arydeedx</li>
+        <li>aryeddededa</li>
+    </ol>
+    <h1>Unordered List</h1>
+    <ul>
+        <li class ="hi">cat</li>
+        <li>gog</li>
+        <li>goat</li>
+    </ul>
+    <h1>Definition list</h1>
+    <dl>
+        <dt>humans</dt>
+        <dd id = "l1">they are weird people</dd>
+        <dt>dogs</dt>
+        <dd>They are better than humans in most aspects</dd>
+    </dl>
+
+    <p>lorems skjd cdsncasc laj clcawjndacke wdckewa cedc le cewc ;lwkel;dkncleknd;lkwae koc ew;ewj;n;oenmoew e ecpeo kcpedcpecpcec</p>
+    <!--these are comments in html arent they nice-->
+    <pre>use of pre formatted tags</pre><br>
+    <img src = "hi.jpeg" alt = "this is a random picture"/><br></br>
+
+    <a href = "www.google.com">Click here to go to google</a>
+
+    <h1>Tables in html</h1>
+    <table border = "border">
+        <tr>
+            <th rowspan = 2>SL</th>
+            <th rowspan = 2>SEM</th>
+            <th rowspan = 2>SUB</th>
+            <th colspan = 2>STUDENT</th>
+
+            
+        </tr>
+        <tr>
+            
+            <td>name</td>
+            <td>SRN</td>
+
+        </tr>
+        <tr>
+            <td>1</td>
+            <td rowspan = 2>3</td>
+            <td>A</td>
+            <td>Arya</td>
+            <td>123</td>
+
+        </tr>
+        <tr>
+            <td>2</td>
+        
+            <td>B</td>
+            <td>rbya</td>
+            <td>133</td>
+            
+        </tr>
+        <tr>
+            <td>1</td>
+            <td >3</td>
+            <td>A</td>
+            <td>Arya</td>
+            <td>123</td>
+            
+        </tr>
+        <tr>
+            <td>1</td>
+            <td >3</td>
+            <td>A</td>
+            <td>Arya</td>
+            <td>123</td>
+            
+        </tr>
+        <!--remember ul li ,ol li, dl dt dd, tabel border = "border",tr,th,td,colspan,rowspan
+        ,img src,alt,a,href , text basically-->
+        <br></br>
+        </table>
+        <a href = "pp2.html" target = "_blank">open form</a>
+        <script>
+            var arr = [1,2,3,4,5,6]
+            console.log(arr.slice(2,5));
+            console.log(arr.splice(2,1,69,70));
+        </script>
+
+
+        
+        
+        
+        
+    
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
+
+

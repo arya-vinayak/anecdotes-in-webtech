@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Flexible</title>
+       
+    </head>
+    
+    <body>
+        <script type = "text/javascript">
+            var emp1 = {
+                "firstName" : "Aruna",
+                "lastName":"Srinivasan",
+                // "showName" : function() {alert(this.firstName + " " + this.lastName); -> this is within the object
+            
+            };
+            //emp1.showName();
+            /*
+            function  showName()
+            {
+                alert(emp1.firstName + " " + emp1.lastName);
+            }
+            showName();
+            */
+           //when we define object using let , the scope of the object is within the block and hence we can use this
+
+            let item = {
+                name : "PES",
+                price : "1,12,069",
+                qty : 1
+            };
+
+            item.show = function(){
+                document.write(this.name = " " + this.price + " " + this.qty);
+            };
+
+            item.show();
+           
+           
+        
+        </script>
+        <p>Heading</p> 
+        
+                  
+    </body>
+    </html>

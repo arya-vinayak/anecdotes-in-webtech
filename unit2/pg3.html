@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        div,ul,li{
+            border:1px solid black;
+            padding : 10px;
+            margin:10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f2(){
+        alert("ID which is executed is ="+ this.getAttribute("id"));
+        }
+         function f1(){
+         //document.querySelector("#div1").addEventListener("click",f2,true);
+         var el1=document.querySelector(".cls1");
+         for(i in el1)
+         {
+             el1[i].addEventListener("click",f2,true);
+             el1[i].addEventListener("click",f2,false);
+        }
+         }
+        
+    </script>
+</head>
+<body onload="f1()">
+    <div id = "div1" class = "cls1">
+        <p>PES University</p>
+        <ul id = "ul1" class = "cls1">
+            <li>B.Tech</li>
+            <li>M.Tech</li>
+            <li>B.Com</li>
+        </ul>
+    
+        <p>B.Tech Branches:</p>
+        <ol id = "ol1" class="cls1">
+            <li>CSE</li>
+            <li>ECE</li>
+            <li>EEE</li>
+            <li>ME</li>
+            <li>BT</li>
+        </ol>
+    </div>
+    
+    
+</body>
+</html>
+
+
+
+
+
+

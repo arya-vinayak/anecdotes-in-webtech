@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite</title>
+    <link rel = "stylesheet" type = "text/css" href="fornite.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" referrerpolicy="no-referrer" />
+    <script type = "text/javascript" src = "jquery-3.6.0.js"></script>
+    <script>function fillstar(){
+        $("#star1").on("click", function(){
+            $(this).css({"fill":"gold", "stroke":"gold"})
+        })
+        $("#star2").on("click", function(){
+            $("#star1").css({"fill":"gold", "stroke":"gold"})
+            $(this).css({"fill":"gold", "stroke":"gold"})
+    
+        })
+        $("#star3").on("click", function(){
+            $("#star1").css({"fill":"gold", "stroke":"gold"})
+            $("#star2").css({"fill":"gold", "stroke":"gold"})
+            $(this).css({"fill":"gold", "stroke":"gold"})
+        })
+        $("#star4").on("click", function(){
+            $("#star1").css({"fill":"gold", "stroke":"gold"})
+            $("#star2").css({"fill":"gold", "stroke":"gold"})
+            $("#star3").css({"fill":"gold", "stroke":"gold"})
+            $(this).css({"fill":"gold", "stroke":"gold"})
+        })
+        $("#star5").on("click", function(){
+            $("#star1").css({"fill":"gold", "stroke":"gold"})
+            $("#star2").css({"fill":"gold", "stroke":"gold"})
+            $("#star3").css({"fill":"gold", "stroke":"gold"})
+            $("#star4").css({"fill":"gold", "stroke":"gold"})
+            $(this).css({"fill":"gold", "stroke":"gold"})
+        })
+
+        
+    
+        document.getElementById("alert").onclick = handle;
+        function handle()
+        {
+            alert("Hurry up!,discount sale is going on!");
+        }
+
+        document.querySelector("h2").addEventListener("click",function()
+        {
+            $(document).ready(function(){
+
+var text = "Fortnite is a world of many experiences. Drop onto the Island and compete to be the last player — or team — standing. Create an Island of your own with your own rules. Hang out with friends on an Island that someone else created. Or save the world by taking down hordes of monsters with others.";
+
+$.each(text.split(" "), function(key, val){
+
+$('#info1').append('<div class="split-text">'+val+'</div>');
+
+});
+
+var each_text = $('.split-text');
+
+$.each(each_text, function(){
+  var rand = Math.floor(Math.random()*1000);
+
+
+   
+
+
+$(this).css({
+   'color':'black',
+   'margin-top': -rand,
+
+}).animate({
+   marginTop: '0px'
+}, 1000);
+
+
+
+});
+
+});
+            //document.getElementById("info1").innerHTML = "Fortnite is a world of many experiences. Drop onto the Island and compete to be the last player — or team — standing. Create an Island of your own with your own rules. Hang out with friends on an Island that someone else created. Or save the world by taking down hordes of monsters with others."
+
+        })
+    }
+    </script>
+    
+</head>
+<body onload ="fillstar()">
+   <div class = "container">
+    
+    <div class = "box" style="right:100px;">
+        <div class = "icon">
+            <i class="fa fa-youtube-square" aria-hidden="true"></i>
+        </div>
+        <div class = "content">
+            <video poster = "Fortnite.webp" id = "v1"  controls = "c1"width = "450" height = "500" >
+             
+                <source autoplay src = "fornite.mp4" type = "video/mp4" >
+                
+            </video>
+        </div>
+    </div>
+    <div class = "box" style = " width: calc(500px - 3px);
+    height: calc(450px - 30px);left:100px">
+        <div class = "icon" style="background: black;pointer-events: none;">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+        </div>
+        <div class = "content">
+            <h2 class="details" >Fortnite</h2>
+            <p class="left1" id="alert" style = "left: -85px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Price: $150.00</p>
+            <div class = "staralign">
+            <svg>
+                <polygon class="star" id="star1" points="10,1 4,18 19,6 1,6 16,18"></polygon>
+            </svg>
+            <svg>
+                <polygon class="star" id="star2" points="10,1 4,18 19,6 1,6 16,18"></polygon>
+            </svg>    
+            <svg>
+                <polygon class="star" id="star3" points="10,1 4,18 19,6 1,6 16,18"></polygon>
+            </svg>    
+            <svg>
+                <polygon class="star" id="star4" points="10,1 4,18 19,6 1,6 16,18"></polygon>
+            </svg>    
+            <svg>
+                <polygon class="star" id="star5" points="10,1 4,18 19,6 1,6 16,18"></polygon>
+            </svg></div>
+        
+            <p class="left1"><u>Write a Review</u> | <u>Read all Reviews</u></p>
+            <textarea style = "background-color: rgb(2, 2, 17);color: azure;font-size: small;"name="" id="" cols="30" rows="5" placeholder="Enter your review" class="left1"
+></textarea>
+
+
+            <br>
+            <div class="align1">
+                <div class="center" style="left: -50px;">
+                <a href="#" class="icoFacebook" title="Facebook"
+                ><i class="fa fa-facebook" style="font-size: 30px;"></i
+                ></a>
+                <a href="#" class="icoTwitter" title="Twitter"
+                ><i class="fa fa-twitter" style="font-size: 30px;"></i
+                ></a>
+                <a href="#" class="icoGoogle" title="Google +"
+                ><i class="fa fa-google-plus" style="font-size: 30px;"></i
+                ></a>
+                <a href="#" class="icoInstagram" title="Instagram"
+                ><i class="fa fa-instagram" aria-hidden="true" style="font-size: 30px;"></i
+                ></a>
+                </div>
+            
+        </div>
+
+        </div>
+    </div>
+
+    <div id = "info1" class = "box" style = " width: calc(500px - 3px);
+    height: calc(350px - 20px);left:115px">
+        
+    </div>
+    
+
+   </div>
+
+   
+    
+</body>
+</html>

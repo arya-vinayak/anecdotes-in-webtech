@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>my javascript bultin objects</title>
+
+    </head>
+    <body>
+        <script>
+            var a = [1,11,22,2,23,5];
+            /*
+            function asc(a,b)
+            {
+                if(a > b)
+                {
+                   return -1
+                }
+                if(a < b)
+                {
+                    return 1
+                }
+                if(a == b)
+                {
+                    return 0;
+                }
+            }
+            */
+           function asc(a,b)
+           {
+            return a-b
+           }
+
+            console.log(a);
+            a.sort(asc)
+            console.log(a);
+            document.write(a)
+            //Math.random generates a random number between 0 and 1
+            //var random  a + Math.floor((Math.random()*(b-a)))
+            console.log(Math.random());
+            //between 0 and 100 exluding 100
+            console.log(1 + Math.floor((Math.random()*(100-1))));
+            //setInterval(function,time in ms)
+            //closeInterval(t)
+            //setTimeout(func,t_in_ms)
+            //clearTimeout(t)
+            /*
+            count = 0;
+            function log()
+            {
+                console.log(count);
+                count++;
+            }
+            var t = setTimeout(log,2000);
+            //clearTimeout(t);
+            */
+           /*
+           count = 0;
+           function log()
+           {
+            console.log(count);
+            count++;
+            if(count == 10)
+            {
+                clearTimeinterval(t)
+            }
+            
+           }
+           var t = setInterval(log,2000);
+           */
+
+          var a= function(a,b)
+          {
+            return a+b;
+          }
+          console.log(a(1,2));
+
+
+
+            </script>
+    </body>
+
+</html>

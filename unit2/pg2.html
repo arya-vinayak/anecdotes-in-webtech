@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        span
+        {
+            color:bisque
+
+        }
+    </style>
+    <script>
+
+        
+        //inline event
+        function func1()
+        {
+            event.target.style.color = "red";
+            event.target.style.backgroundColor = "green";
+            event.target.innerHTML = "TEXT CHANGED"
+            //event.target.innerTEXT = "TEXT <span>CHANGED</span>"
+        }
+
+
+
+        //Event handler properties
+        //element.on<event> = function_name;
+        function func2()
+        {
+        var ele1 = document.querySelectorAll("li").addEventListener("click",func1);
+        /*
+        for(i in ele1)
+        {
+            ele1[i].onclick = func1;
+        }
+        */
+        }
+        function func3()
+        {
+            event.target.style.color = "blue";
+            event.target.style.backgroundColor = "black";
+            
+            //event.target.innerTEXT = "TEXT <span>CHANGED</span>"
+        }
+        
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body >
+    <h2 ondblclick = "func2()" onclick = "func3" >TOP G's</h2>
+    <ul>
+        <li>Ratan Tata</li>
+        <li>Elon Musk</li>
+        <li>Andrew Tate(useless)</li>
+        
+    </ul>
+    
+</body>
+</html>

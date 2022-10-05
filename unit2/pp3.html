@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTORDER</title>
+    <script>
+        function clicker(event)
+        {
+            console.log(event.target.id + "handled 1");
+        }
+        function init()
+        {
+            document.querySelector("p").addEventListener("click",clicker,true);//by default 3rd argument to the event handler is false which makes it come under the last event
+            //if it is true it comes as the first event to be handled in the console
+
+            document.querySelector("p").addEventListener("click",clicker,true);//it is overwriiten by the same first event
+            // document.querySelector("p").onclick = function()
+            // {
+            //     console.log(event.target.id + "handled 3");//gets executed first
+            // }
+            // document.querySelector("p").onclick = function()
+            // {
+            //     console.log(event.target.id + "handled 4");//gets executed first
+            // }
+        }
+    </script>
+</head>
+<!-- we are going to check the sequence in which event listeners are executed  -->
+<body onload  = "init()">
+    <!-- the inline event is ignored when there are two or more events happening using the property method to the same tag -->
+    <p id = "p1" onclick = "console.log('p1 handler 4')">just click here lets see wts up</p>
+    
+</body>
+</html>
+

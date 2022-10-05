@@ -1,0 +1,37 @@
+h1,h3,h4
+{
+    color:red;background-color:green;
+}
+h1:hover
+{
+    color:rgba(0, 255, 225, 0.471);background-color:rgba(0, 0, 0, 0);
+}
+h1.ana
+{
+    color:rgba(14, 2, 236, 0.471);background-color:rgba(244, 180, 18, 0);
+}
+
+h2
+{
+     color:rgb(111, 5, 130);background-color:yellowgreen;font-size:100px;border: dashed;background-image: url(hi.jpeg);
+}
+h1.aro
+{
+    color:rgb(253, 10, 193);background-color:rgba(0, 0, 0, 0.937);
+}
+li.apa{
+    color:rgb(183, 255, 0);background-color:rgba(0, 0, 0, 0);font-size: 30px;
+
+
+}
+li.ama{
+    color:rgb(255, 106, 0);background-color:rgba(0, 0, 0, 0);font-size: 30px;
+
+
+}
+
+h2#abc1
+{
+
+    color:rgba(5, 141, 41, 0.952);background-color:rgba(0, 0, 0, 0);font-size: 30px;
+}

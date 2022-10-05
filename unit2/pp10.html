@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo1"></p>
+    <p id = "demo2"></p>
+    
+
+    <script>
+        text = "<bookstore>"+"<book>"+"<title> Harry potter </title>" + "<author>J K ROWLING</author>"+"<year>1997</year>"+"</book>" + "</bookstore>";
+        var parser = new DOMParser();
+        xmlDOM = parser.parseFromString(text,"text/xml");
+        title = xmlDOM.getElementsByTagName("title")[0];
+        title.childNodes[0].nodeValue += "seven series";
+        document.getElementById("demo1").innerHTML = title.childNodes[0].nodeValue;
+
+        var serialiser = new XMLSerializer();
+        var str = serialiser.serializeToString(xmlDOM);
+        console.log(str);
+    
+    </script>
+</body>
+</html>

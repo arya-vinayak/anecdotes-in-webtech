@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Flexible</title>
+        <style>
+            #main
+            {
+                width:300px;
+                height:150px;
+                border:5px solid rgb(255, 255, 255);
+                display : flex;
+            }
+        /* all the children of div willl get affected */
+        #main div{
+            /* flex:1; */
+            /* flex 1 fits the text to the frame */
+            flex-grow :1;
+            flex-shrink:0;
+            flex-basis:10px;
+            
+        }
+        h1{
+            color: white;
+
+        }
+
+        div.one
+        {
+            background-color: white;
+        }
+        div.two
+        {
+            background-color: coral;
+        }
+        div.three
+        {
+            background-color: paleturquoise;
+        }
+        div.four
+        {
+            background-color: black;
+        }
+        div:nth-of-type(6)
+        {
+            background-color: bisque;
+        }
+        div:nth-of-type(7)
+        {
+            background-color: greenyellow;
+            flex-shrink: 1;
+        }
+        body
+        {
+
+        }
+
+        @media screen and (max-width: 700px)
+        {
+            body
+            {
+
+            }
+        }
+        </style>
+    </head>
+    <link rel = "icon" href = "avengers.png"/>
+    <body bgcolor="black">
+        <h1>Flex</h1>
+        <div id="main">
+            <div style = "background-color:coral;">5</div>
+            <div style = "background-color:aqua;">5</div>
+            <div style = "background-color:blue;">4x</div>
+            <div style = "background-color:blueviolet;">6</div>
+            <div style = "background-color:royalblue;">9</div>
+            <div>20px</div>
+            <div>30px</div>  
+                  
+    </body>
+    
+
+
+
+</html>

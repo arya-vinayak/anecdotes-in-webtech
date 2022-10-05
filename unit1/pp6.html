@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>medias</title>
+        <style>
+            #main{
+                width:300px;
+                height:200px;
+
+                border:3px solid black;
+                display:flex;
+            }
+            /*
+
+            #main div {
+                flex-grow:0;
+                flex-shrink:0;
+                flex-basis:50px;/*every div will initisally have 50px defailt size
+                
+
+            }
+            */
+            /*
+            #main div:nth-of-type(1):{flex-grow:1;}
+            #main div:nth-of-type(2):{flex-grow:5;}
+            #main div:nth-of-type(3):{flex-grow:1;}
+            #main div:nth-of-type(4):{flex-grow:1;}
+            #main div:nth-of-type(5):{flex-grow:1;}
+            */
+
+            #main div 
+            {
+                flex-grow:1;
+                flex-shrink:1;
+                flex-basis:100px;
+
+            }
+            div:nth-of-type(1):{flex-shrink:3;} 
+
+            
+           
+
+            </style>
+    </head>
+    <body>
+        <h1>Flex</h1>
+        <div id = "main">
+        <div style = "background-color:coral;">50px</div>
+        <div style = "background-color:lightblue;">100px</div>
+        <div style = "background-color:green;">50px</div>
+        <div style = "background-color:pink;">50px</div>
+        <div style = "background-color:lightgrey;">50px</div>
+        </div>
+        
+    </body>
+    </html>

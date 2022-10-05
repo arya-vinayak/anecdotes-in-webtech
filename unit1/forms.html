@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Forms</title>
+        <h1>Google Forms</h1>
+
+    </head>
+    <body>
+        <form method="post" action="survey.php" target="_blank">
+            Name : <input type="Text" size="30px" name="urname" placeholder = "Enter your name"/><br></br>
+            
+            Email : <input type = "Text" size="50px" name="youremail" placeholder = "Enter your email"/><br></br>
+            Address: <textarea rows=5 col="50"> Enter the address </textarea><br></br>
+            How many classes do you have? <input type="number" size="50px"/><br></br>
+            Sem : SEM1 <input type = "radio" name = "sem" value ="sem1" checked></input> SEM2 <input type = "radio" name = "sem" value ="sem2"></input> SEM3 <input type = "radio" name = "sem" value ="sem3"></input><br></br>
+            Sem : SEM1 <input type = "checkbox" name = "sem" value ="sem1" checked></input> SEM2 <input type = "checkbox" name = "sem" value ="sem2"></input> SEM3 <input type = "checkbox" name = "sem" value ="sem3"></input><br></br>
+            Section:<select name="list" >
+                <!-- we use the select tag to create a drop down list box -->
+                <!--we can see all the options using multiple -->
+                <option value = "nil">Select one</option>
+                <option value = "A">A</option>
+                <option value = "B">B</option>
+                <option value = "C">C</option>
+            </select><br></br>
+            <input type = "button" value = "click here">
+            <br></br>
+            <input type = "button" value = "submit">
+            <input type = "button" value = "reset"><br></br>
+            Mother's email : <input type="email"><br></br>
+            energy level : <input type="range"><br></br>
+            Linkedn Profile:  <input type="url"><br></br>
+            Favourite colour :  <input type="color"><br></br>
+            Search <input type="search"><br></br>
+            Date <input type="date"><br></br>
+            time <input type="time"><br></br>
+            <!-- for patterns -->
+            Phone number <input type = "number" pattern = "[0-9]{10}"/><br>
+            hi <input type="Kuch Bhi"><br></br>
+            file <input type="file"><br></br>
+            month<input type="month"><br></br>
+            week <input type="week"><br></br>
+        </form>
+
+        <fieldset>
+            Date <input type="date"><br></br>
+            time <input type="time"><br></br>
+            file <input type="file"><br></br>
+            
+
+        </fieldset>
+
+        <!-- for subscripts and superscripts form of text we use sub and sup respectively -->
+        H<sub>2</sub>O -> H<sup>+</sup> + OH<sup>-</sup>
+    </body>
+</html>
+<!--
